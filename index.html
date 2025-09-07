@@ -105,6 +105,399 @@
                     <img src="https://placehold.co/600x400/3b82f6/ffffff?text=Insights" alt="360 Deals" class="w-full h-48 object-cover">
                     <div class="p-6 flex flex-col flex-grow">
                         <p class="text-sm text-blue-600 font-semibold mb-2">MUSIC BUSINESS</p>
+                        <h3 class="text-xl font-semibold mb-3">What are 360 Deals in the Music Industry (And Should You Sign One)?</h3>
+                        <p class="text-gray-600 flex-grow">With 720 monthly searches and low competition, this is a hot topic. We break down what these controversial deals really mean for a new artist's career.</p>
+                        <button onclick="openArticleModal('article-360-deals')" class="mt-4 font-semibold text-blue-600 hover:text-blue-800 text-left">Read More &rarr;</button>
+                    </div>
+                </div>
+                <!-- Blog Post 2 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+                    <img src="https://placehold.co/600x400/1e3a8a/ffffff?text=Knowledge" alt="Record Labels" class="w-full h-48 object-cover">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <p class="text-sm text-blue-600 font-semibold mb-2">GETTING SIGNED</p>
+                        <h3 class="text-xl font-semibold mb-3">The Best Record Labels for New Artists in 2025</h3>
+                        <p class="text-gray-600 flex-grow">Artists are searching for this 170 times a month. Our guide cuts through the noise to highlight the independent labels actually looking for new talent right now.</p>
+                        <button onclick="openArticleModal('article-labels')" class="mt-4 font-semibold text-blue-600 hover:text-blue-800 text-left">Read More &rarr;</button>
+                    </div>
+                </div>
+                <!-- Blog Post 3 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+                    <img src="https://placehold.co/600x400/60a5fa/ffffff?text=Strategy" alt="Publishing Companies" class="w-full h-48 object-cover">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <p class="text-sm text-blue-600 font-semibold mb-2">PUBLISHING</p>
+                        <h3 class="text-xl font-semibold mb-3">Top Music Publishing Companies for Independent Artists</h3>
+                        <p class="text-gray-600 flex-grow">This is a key question for creators aiming to professionalize. This article provides a curated list of publishers who champion and work with indie artists.</p>
+                        <button onclick="openArticleModal('article-publishers')" class="mt-4 font-semibold text-blue-600 hover:text-blue-800 text-left">Read More &rarr;</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Your AI-Powered Legal & Licensing Department</h2>
+                <p class="text-gray-600 mt-2">Tools that give you the first-mover advantage.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1: AI Agreement Crafting -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-lg text-center border-2 border-blue-600">
+                    <div class="text-4xl text-blue-600 mb-4"><i class="fas fa-feather-alt"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">AI Agreement Crafting</h3>
+                    <p class="text-gray-600">Our core feature. Describe your deal in plain English and generate draft sync licenses, master use agreements, and producer contracts in seconds.</p>
+                </div>
+                <!-- Feature 2: AI Contract Analysis -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-lg text-center">
+                    <div class="text-4xl text-blue-600 mb-4"><i class="fas fa-search-dollar"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">AI Contract Analysis</h3>
+                    <p class="text-gray-600">Received a contract from a third party? Upload it and our AI will summarize key terms, explain complex clauses, and flag potential issues for you.</p>
+                </div>
+                <!-- Feature 3: Opportunity Finder -->
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <div class="text-4xl text-blue-600 mb-4"><i class="fas fa-bullseye"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Opportunity Finder</h3>
+                    <p class="text-gray-600">Get access to a curated list of active licensing opportunities from filmmakers, game developers, and content creators, updated weekly by our AI.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Newsletter CTA Section -->
+    <section id="newsletter" class="gradient-bg py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white">Get Your First-Mover Advantage</h2>
+            <p class="text-blue-100 mt-2 max-w-2xl mx-auto">Join our "License This!" newsletter and get a weekly list of real, active music licensing opportunities delivered directly to your inbox. Free forever.</p>
+            <form class="mt-8 max-w-md mx-auto" onsubmit="handleNewsletterSignup(event)">
+                <div class="flex flex-col md:flex-row gap-4">
+                    <input type="email" id="newsletter-email" placeholder="Enter your email address" class="w-full px-4 py-3 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-white" required>
+                    <button type="submit" class="bg-white text-blue-700 font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors">Sign Up</button>
+                </div>
+                <p id="newsletter-status" class="text-white mt-4"></p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Simple Pricing for Ambitious Creators</h2>
+                <p class="text-gray-600 mt-2">Start free. Upgrade when you're closing deals.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Free Tier -->
+                <div class="bg-white p-8 rounded-lg shadow-lg border border-gray-200 flex flex-col">
+                    <h3 class="text-2xl font-semibold text-center">Free</h3>
+                    <p class="text-center text-gray-500 mt-2">To get you started</p>
+                    <p class="text-5xl font-bold text-center mt-4">$0<span class="text-lg font-medium text-gray-500">/mo</span></p>
+                    <ul class="mt-8 space-y-4 text-gray-600 flex-grow">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> 2 AI Agreement Drafts / month</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> 1 AI Contract Analysis / month</li>
+                    </ul>
+                    <a href="#" class="w-full text-center mt-8 bg-gray-200 text-gray-800 font-bold py-3 px-6 rounded-lg hover:bg-gray-300 transition-colors">Start for Free</a>
+                </div>
+                <!-- Indie Artist Plan -->
+                <div class="bg-white p-8 rounded-lg shadow-2xl border-2 border-blue-600 flex flex-col relative">
+                    <p class="absolute top-0 -translate-y-1/2 bg-blue-600 text-white text-sm font-bold px-3 py-1 rounded-full">MOST POPULAR</p>
+                    <h3 class="text-2xl font-semibold text-center text-blue-800">Creator</h3>
+                    <p class="text-center text-gray-500 mt-2">For active artists & managers</p>
+                    <p class="text-5xl font-bold text-center mt-4">$19<span class="text-lg font-medium text-gray-500">/mo</span></p>
+                    <ul class="mt-8 space-y-4 text-gray-600 flex-grow">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> 15 AI Agreement Drafts / month</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> 10 AI Contract Analyses / month</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> Full Access to Opportunity Finder</li>
+                    </ul>
+                    <a href="#" class="w-full text-center mt-8 bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors">Choose Plan</a>
+                </div>
+                <!-- Publisher Pro Plan -->
+                <div class="bg-white p-8 rounded-lg shadow-lg border border-gray-200 flex flex-col">
+                    <h3 class="text-2xl font-semibold text-center">Publisher</h3>
+                    <p class="text-center text-gray-500 mt-2">For professionals & teams</p>
+                    <p class="text-5xl font-bold text-center mt-4">$79<span class="text-lg font-medium text-gray-500">/mo</span></p>
+                    <ul class="mt-8 space-y-4 text-gray-600 flex-grow">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> All Creator features</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> Unlimited AI Agreement Drafts</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> Unlimited AI Contract Analyses</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> Priority Support</li>
+                    </ul>
+                    <a href="#" class="w-full text-center mt-8 bg-gray-800 text-white font-bold py-3 px-6 rounded-lg hover:bg-gray-900 transition-colors">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-12">
+        <div class="container mx-auto px-6 text-center text-gray-600">
+            <p>&copy; 2025 LicenseRight AI. All rights reserved.</p>
+            <div class="mt-4">
+                <a href="#" class="text-gray-600 hover:text-blue-600 px-2">Terms of Service</a>
+                <a href="#" class="text-gray-600 hover:text-blue-600 px-2">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Article Modal -->
+    <div id="article-modal" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50 hidden opacity-0">
+        <div class="modal-content bg-white rounded-lg shadow-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto transform scale-95">
+            <div class="sticky top-0 bg-white border-b px-6 py-4 flex justify-between items-center">
+                <h2 id="modal-title" class="text-2xl font-bold text-gray-800"></h2>
+                <button onclick="closeArticleModal()" class="text-gray-500 hover:text-gray-800 text-2xl">&times;</button>
+            </div>
+            <div id="modal-body" class="p-6 md:p-8 prose lg:prose-xl max-w-none">
+                <!-- Article content will be injected here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Hidden Article Content -->
+    <div id="article-content" class="hidden">
+        <div id="article-360-deals-content">
+            <h3 class="font-bold text-2xl mb-4">Demystifying the 360 Deal: A Guide for Independent Artists</h3>
+            <p class="mb-4">You’ve heard the term whispered in industry circles, often with a mix of awe and caution: the "360 deal." As an independent artist, it represents one of the most significant and potentially life-altering contracts you could ever sign. But what is it, really? And more importantly, is it right for you?</p>
+            <p class="mb-4">A 360 deal, also known as a "multiple rights deal," is a contract between a record label and an artist where the label receives a percentage of revenue from all of the artist's activities, not just recorded music sales. This includes touring, merchandise, publishing, endorsements, film and TV appearances, and more. In essence, the label invests in the artist as a complete brand and, in return, gets a piece of every pie.</p>
+            <h4 class="font-bold text-xl mt-6 mb-2">The Pros: Why Artists Sign Them</h4>
+            <ul class="list-disc list-inside mb-4 space-y-2">
+                <li><strong>Significant Investment:</strong> Labels are more willing to invest heavily in an artist's development, marketing, and touring because they have more ways to recoup their money.</li>
+                <li><strong>Unified Team:</strong> Your career is managed by a single, powerful entity. Your tour promotion, album release, and merchandise are all handled by one team, creating a cohesive brand strategy.</li>
+                <li><strong>Leverage:</strong> A major label's backing can open doors to opportunities that are nearly impossible to access as an independent artist, from major festival slots to brand partnerships.</li>
+            </ul>
+            <h4 class="font-bold text-xl mt-6 mb-2">The Cons: The Risks Involved</h4>
+            <ul class="list-disc list-inside mb-4 space-y-2">
+                <li><strong>Lower Percentage:</strong> You will be giving away a piece of everything. The percentage might be small (typically 10-25%), but it applies to revenue streams you might have previously kept 100% of.</li>
+                <li><strong>Loss of Control:</strong> The label has a say in all aspects of your career. This can lead to creative differences and pressure to accept opportunities you might otherwise decline.</li>
+                <li><strong>Long-Term Commitment:</strong> These are not short-term contracts. You could be tied to the label for many years, across multiple albums and projects.</li>
+            </ul>
+            <p class="font-bold">The bottom line: A 360 deal is a high-risk, high-reward proposition. It can provide the fuel to launch a global career, but it comes at the cost of revenue and autonomy. Before ever considering one, it's crucial to have expert legal advice and a clear understanding of your long-term goals.</p>
+        </div>
+        <div id="article-labels-content">
+            <h3 class="font-bold text-2xl mb-4">Beyond the Majors: The Best Independent Record Labels for New Artists in 2025</h3>
+            <p class="mb-4">For decades, the dream of every new artist was to get signed by a major label. But the digital age has shattered that paradigm. Today, some of the most innovative, artist-friendly, and culturally relevant music is released by independent labels. They offer creative freedom, fair deals, and a passionate team that genuinely believes in the music.</p>
+            <p class="mb-4">But with thousands of indie labels out there, where do you even start? We've compiled a list of some of the most respected and forward-thinking labels that have a proven track record of discovering and nurturing new talent.</p>
+            <h4 class="font-bold text-xl mt-6 mb-2">Labels to Watch:</h4>
+            <ul class="list-disc list-inside mb-4 space-y-3">
+                <li><strong>Secretly Canadian:</strong> Known for their impeccable taste and diverse roster (including artists like ANOHNI and Whitney), they have a reputation for building long-term careers.</li>
+                <li><strong>Glassnote Records:</strong> Home to global superstars like Mumford & Sons and CHVRCHES, Glassnote proves that an indie can have major-label impact with a boutique, artist-first approach.</li>
+                <li><strong>Partisan Records:</strong> A powerhouse of post-punk and indie rock, Partisan is celebrated for its bold signings and commitment to authentic, boundary-pushing artists like IDLES and Fontaines D.C.</li>
+                <li><strong>Ninja Tune:</strong> For artists in the electronic, hip-hop, and experimental space, Ninja Tune is a legendary label that has remained at the cutting edge for over 30 years.</li>
+                <li><strong>Ghostly International:</strong> A unique label that operates at the intersection of electronic music and visual art, Ghostly is perfect for artists who see their music as part of a larger aesthetic world.</li>
+            </ul>
+            <p class="font-bold">How to get their attention? Forget mass emails. Research the specific A&R at each label. Follow them on social media. Understand their roster and their ethos. A targeted, personal approach that shows you've done your homework is infinitely more effective than a demo blast.</p>
+        </div>
+        <div id="article-publishers-content">
+            <h3 class="font-bold text-2xl mb-4">Finding a Champion: Top Music Publishing Companies for Independent Artists</h3>
+            <p class="mb-4">As an independent artist, you know that a great song is only the beginning. Getting that song heard, placed in films or TV shows, and earning royalties is where a music publisher becomes your most valuable partner. A good publisher doesn't just collect money; they actively champion your music and create new opportunities.</p>
+            <p class="mb-4">While the major publishers (Sony, Universal, Warner Chappell) are giants, many independent publishers are more accessible and offer a more hands-on approach for developing writers. Here are some of the best publishing companies for indie artists who are serious about the business of their music.</p>
+            <h4 class="font-bold text-xl mt-6 mb-2">Publishers Who Partner with Indies:</h4>
+            <ul class="list-disc list-inside mb-4 space-y-3">
+                <li><strong>Kobalt Music Group:</strong> A technology-driven publisher famous for its transparency and creator-first deals. They offer administration deals that allow you to retain ownership of your copyrights—a game-changer for many artists.</li>
+                <li><strong>Downtown Music Publishing:</strong> With a fantastic creative team, Downtown is known for actively pitching songs for sync placements and helping artists secure high-profile collaborations.</li>
+                <li><strong>Sentric Music:</strong> An excellent starting point for emerging songwriters. Sentric offers a flexible, 28-day rolling contract that allows you to collect royalties without getting locked into a long-term deal. It's a great way to professionalize your publishing.</li>
+                <li><strong>Wixen Music Publishing:</strong> A staunch defender of songwriter rights, Wixen has a reputation for meticulous administration and ensuring every penny is collected for their clients.</li>
+            </ul>
+            <p class="font-bold">Before approaching a publisher, make sure your business is in order. Register your works with a PRO (ASCAP, BMI, SESAC), have clear documentation of your writer splits, and create a small, curated playlist of your absolute best work. Professionalism and preparation will make you stand out.</p>
+        </div>
+    </div>
+
+
+    <script>
+        // --- Gemini API Call Function ---
+        async function callGemini(systemPrompt, userPrompt, outputElementId) {
+            const outputElement = document.getElementById(outputElementId);
+            outputElement.style.display = 'block';
+            outputElement.innerHTML = '<div class="flex items-center justify-center"><i class="fas fa-spinner fa-spin mr-2"></i>Generating...</div>';
+
+            const apiKey = ""; // Leave blank for automatic key handling
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+
+            const payload = {
+                contents: [{ parts: [{ text: userPrompt }] }],
+                systemInstruction: {
+                    parts: [{ text: systemPrompt }]
+                },
+            };
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    throw new Error(`API call failed with status: ${response.status}`);
+                }
+
+                const result = await response.json();
+                const candidate = result.candidates?.[0];
+
+                if (candidate && candidate.content?.parts?.[0]?.text) {
+                    let formattedText = candidate.content.parts[0].text.replace(/(\*\*|###)(.*?)\1/g, '<strong>$2</strong>');
+                    outputElement.innerHTML = formattedText.replace(/\n/g, '<br>');
+                } else {
+                    outputElement.innerText = 'Sorry, the AI could not generate a response. Please try again.';
+                }
+            } catch (error) {
+                console.error('Gemini API Error:', error);
+                outputElement.innerText = 'An error occurred. Please check the console for details.';
+            }
+        }
+
+        // --- Tool Functions ---
+        function generateSocialIdeas() {
+            const userInput = document.getElementById('social-input').value;
+            if (!userInput) { alert('Please enter some information about your music.'); return; }
+            
+            const systemPrompt = "You are a creative social media manager for indie musicians. Generate 5 distinct and engaging social media post ideas based on the user's input. Format the output clearly with headers for each idea using markdown ### for headers.";
+            const userPrompt = `Generate 5 social media post ideas for the following: ${userInput}`;
+            callGemini(systemPrompt, userPrompt, 'social-output');
+        }
+
+        function generateArtistBio() {
+            const userInput = document.getElementById('bio-input').value;
+            if (!userInput) { alert('Please enter some keywords about your music.'); return; }
+
+            const systemPrompt = "You are an expert music journalist who writes compelling artist biographies. Write a professional, 2-paragraph artist bio based on the keywords provided by the user. The tone should be engaging and professional.";
+            const userPrompt = `Write an artist bio based on these keywords: ${userInput}`;
+            callGemini(systemPrompt, userPrompt, 'bio-output');
+        }
+
+        function generateFanEmail() {
+            const userInput = document.getElementById('email-input').value;
+            if (!userInput) { alert('Please enter the news you want to share.'); return; }
+
+            const systemPrompt = "You are a friendly and engaging community manager for a musician. Draft a concise and exciting email to send to a fan mailing list based on the user's update. Use a conversational tone and include a clear call to action.";
+            const userPrompt = `Draft a fan email about the following news: ${userInput}`;
+            callGemini(systemPrompt, userPrompt, 'email-output');
+        }
+        
+        // --- Newsletter Signup ---
+        function handleNewsletterSignup(event) {
+            event.preventDefault();
+            const emailInput = document.getElementById('newsletter-email');
+            const statusElement = document.getElementById('newsletter-status');
+            
+            if (emailInput.value && emailInput.checkValidity()) {
+                statusElement.textContent = "Thank you for subscribing!";
+                statusElement.style.color = '#a7f3d0';
+                emailInput.value = ''; 
+            } else {
+                statusElement.textContent = "Please enter a valid email address.";
+                statusElement.style.color = '#fca5a5';
+            }
+        }
+        
+        // --- Article Modal Functions ---
+        const modal = document.getElementById('article-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalBody = document.getElementById('modal-body');
+
+        function openArticleModal(articleId) {
+            const articleContent = document.getElementById(`${articleId}-content`).innerHTML;
+            const articleTitle = document.querySelector(`button[onclick="openArticleModal('${articleId}')"]`).closest('.p-6').querySelector('h3').innerText;
+            
+            modalTitle.innerText = articleTitle;
+            modalBody.innerHTML = articleContent;
+
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                modal.querySelector('.modal-content').classList.remove('scale-95');
+            }, 10);
+        }
+
+        function closeArticleModal() {
+            modal.classList.add('opacity-0');
+            modal.querySelector('.modal-content').classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        }
+
+        // Close modal on escape key press
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                closeArticleModal();
+            }
+        });
+    </script>
+
+</body>
+</html>
+
+    </header>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-20 md:py-32">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">You Wrote the Song. Now Write the Contract.</h1>
+            <p class="mt-4 text-lg md:text-xl text-blue-100 max-w-3xl mx-auto">Generate professional music licensing agreements, analyze complex contracts, and find opportunities—all with the power of AI. Built for artists and publishers who are ready to build an empire.</p>
+            <div class="mt-8">
+                <a href="#pricing" class="bg-white text-blue-700 font-bold py-3 px-8 rounded-full text-lg hover:bg-gray-100 transform hover:scale-105 transition-transform">Start for Free</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Free AI Marketing Tools Section -->
+    <section id="tools" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Free AI Marketing Tools for Artists</h2>
+                <p class="text-gray-600 mt-2">Grow your audience. Build your brand. No sign-up required.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Tool 1: Social Media Content Idea Generator -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="text-3xl text-blue-600 mr-4"><i class="fas fa-lightbulb"></i></div>
+                        <h3 class="text-xl font-semibold">Social Post Idea Generator</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Tell our AI about your latest song or upcoming show, and get 5 engaging social media post ideas instantly.</p>
+                    <textarea id="social-input" class="w-full p-2 border border-gray-300 rounded-md" rows="3" placeholder="e.g., My new single 'Sunset Drive' is out Friday. It's a chill indie pop track."></textarea>
+                    <button onclick="generateSocialIdeas()" class="w-full mt-4 bg-blue-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors">Generate Ideas</button>
+                    <div id="social-output" class="mt-4 p-4 bg-gray-50 rounded-md text-sm text-gray-700" style="display:none;"></div>
+                </div>
+                <!-- Tool 2: Artist Bio Crafter -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="text-3xl text-blue-600 mr-4"><i class="fas fa-user-edit"></i></div>
+                        <h3 class="text-xl font-semibold">Artist Bio Crafter</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Enter a few keywords about your music and story, and get a professional artist bio for your website or EPK.</p>
+                    <textarea id="bio-input" class="w-full p-2 border border-gray-300 rounded-md" rows="3" placeholder="e.g., Solo artist, Seattle, soulful vocals, alternative R&B, inspired by Frank Ocean"></textarea>
+                    <button onclick="generateArtistBio()" class="w-full mt-4 bg-blue-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors">Craft Bio</button>
+                    <div id="bio-output" class="mt-4 p-4 bg-gray-50 rounded-md text-sm text-gray-700" style="display:none;"></div>
+                </div>
+                <!-- Tool 3: Fan Engagement Email Writer -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="text-3xl text-blue-600 mr-4"><i class="fas fa-envelope-open-text"></i></div>
+                        <h3 class="text-xl font-semibold">Fan Email Writer</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">What's your news? Our AI will draft an engaging email to send to your fan mailing list to keep them updated.</p>
+                    <textarea id="email-input" class="w-full p-2 border border-gray-300 rounded-md" rows="3" placeholder="e.g., Announcing a new tour, new merch available, sharing a behind-the-scenes video"></textarea>
+                    <button onclick="generateFanEmail()" class="w-full mt-4 bg-blue-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors">Write Email</button>
+                    <div id="email-output" class="mt-4 p-4 bg-gray-50 rounded-md text-sm text-gray-700" style="display:none;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800">From the Blog</h2>
+                <p class="text-gray-600 mt-2">Insights to help you build your music empire.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Blog Post 1 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+                    <img src="https://placehold.co/600x400/3b82f6/ffffff?text=Insights" alt="360 Deals" class="w-full h-48 object-cover">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <p class="text-sm text-blue-600 font-semibold mb-2">MUSIC BUSINESS</p>
                         <h3 class="text-xl font-semibold mb-3">What are 360 Deals in the Music Industry?</h3>
                         <p class="text-gray-600 flex-grow">With 720 monthly searches and low competition, this is a hot topic. We break down what these controversial deals really mean for a new artist's career.</p>
                         <a href="blog_360_deals.html" class="mt-4 font-semibold text-blue-600 hover:text-blue-800">Read More &rarr;</a>
