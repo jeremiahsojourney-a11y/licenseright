@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LicenseRight AI - Draft Pro-Level Music Agreements in Minutes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #60a5fa 100%); }
+        .modal-overlay {
+            transition: opacity 0.3s ease;
+        }
+        .modal-content {
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-blue-800">
+                <i class="fas fa-file-signature"></i> LicenseRight AI
+            </div>
+            <div>
+                <a href="#features" class="text-gray-600 hover:text-blue-600 px-3 py-2">Features</a>
+                <a href="#tools" class="text-gray-600 hover:text-blue-600 px-3 py-2">Free Tools</a>
+                <a href="#blog" class="text-gray-600 hover:text-blue-600 px-3 py-2">Blog</a>
+                <a href="#pricing" class="text-gray-600 hover:text-blue-600 px-3 py-2">Pricing</a>
+                <a href="#newsletter" class="bg-blue-600 text-white font-semibold px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">Join Newsletter</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-20 md:py-32">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">You Wrote the Song. Now Write the Contract.</h1>
+            <p class="mt-4 text-lg md:text-xl text-blue-100 max-w-3xl mx-auto">Generate professional music licensing agreements, analyze complex contracts, and find opportunities—all with the power of AI. Built for artists and publishers who are ready to build an empire.</p>
+            <div class="mt-8">
+                <a href="#pricing" class="bg-white text-blue-700 font-bold py-3 px-8 rounded-full text-lg hover:bg-gray-100 transform hover:scale-105 transition-transform">Start for Free</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Free AI Marketing Tools Section -->
+    <section id="tools" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Free AI Marketing Tools for Artists</h2>
+                <p class="text-gray-600 mt-2">Grow your audience. Build your brand. No sign-up required.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Tool 1: Social Media Content Idea Generator -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="text-3xl text-blue-600 mr-4"><i class="fas fa-lightbulb"></i></div>
+                        <h3 class="text-xl font-semibold">Social Post Idea Generator</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Tell our AI about your latest song or upcoming show, and get 5 engaging social media post ideas instantly.</p>
+                    <textarea id="social-input" class="w-full p-2 border border-gray-300 rounded-md" rows="3" placeholder="e.g., My new single 'Sunset Drive' is out Friday. It's a chill indie pop track."></textarea>
+                    <button onclick="generateSocialIdeas()" class="w-full mt-4 bg-blue-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors">Generate Ideas</button>
+                    <div id="social-output" class="mt-4 p-4 bg-gray-50 rounded-md text-sm text-gray-700" style="display:none;"></div>
+                </div>
+                <!-- Tool 2: Artist Bio Crafter -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="text-3xl text-blue-600 mr-4"><i class="fas fa-user-edit"></i></div>
+                        <h3 class="text-xl font-semibold">Artist Bio Crafter</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Enter a few keywords about your music and story, and get a professional artist bio for your website or EPK.</p>
+                    <textarea id="bio-input" class="w-full p-2 border border-gray-300 rounded-md" rows="3" placeholder="e.g., Solo artist, Seattle, soulful vocals, alternative R&B, inspired by Frank Ocean"></textarea>
+                    <button onclick="generateArtistBio()" class="w-full mt-4 bg-blue-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors">Craft Bio</button>
+                    <div id="bio-output" class="mt-4 p-4 bg-gray-50 rounded-md text-sm text-gray-700" style="display:none;"></div>
+                </div>
+                <!-- Tool 3: Fan Engagement Email Writer -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="text-3xl text-blue-600 mr-4"><i class="fas fa-envelope-open-text"></i></div>
+                        <h3 class="text-xl font-semibold">Fan Email Writer</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">What's your news? Our AI will draft an engaging email to send to your fan mailing list to keep them updated.</p>
+                    <textarea id="email-input" class="w-full p-2 border border-gray-300 rounded-md" rows="3" placeholder="e.g., Announcing a new tour, new merch available, sharing a behind-the-scenes video"></textarea>
+                    <button onclick="generateFanEmail()" class="w-full mt-4 bg-blue-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors">Write Email</button>
+                    <div id="email-output" class="mt-4 p-4 bg-gray-50 rounded-md text-sm text-gray-700" style="display:none;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800">From the Blog</h2>
+                <p class="text-gray-600 mt-2">Insights to help you build your music empire.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Blog Post 1 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+                    <img src="https://placehold.co/600x400/3b82f6/ffffff?text=Insights" alt="360 Deals" class="w-full h-48 object-cover">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <p class="text-sm text-blue-600 font-semibold mb-2">MUSIC BUSINESS</p>
+                        <h3 class="text-xl font-semibold mb-3">What are 360 Deals in the Music Industry?</h3>
+                        <p class="text-gray-600 flex-grow">With 720 monthly searches and low competition, this is a hot topic. We break down what these controversial deals really mean for a new artist's career.</p>
+                        <a href="blog_360_deals.html" class="mt-4 font-semibold text-blue-600 hover:text-blue-800">Read More &rarr;</a>
+                    </div>
+                </div>
+                <!-- Blog Post 2 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+                    <img src="https://placehold.co/600x400/1e3a8a/ffffff?text=Knowledge" alt="Record Labels" class="w-full h-48 object-cover">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <p class="text-sm text-blue-600 font-semibold mb-2">GETTING SIGNED</p>
+                        <h3 class="text-xl font-semibold mb-3">The Best Record Labels for New Artists in 2025</h3>
+                        <p class="text-gray-600 flex-grow">Artists are searching for this 170 times a month. Our guide cuts through the noise to highlight the independent labels actually looking for new talent right now.</p>
+                        <a href="#" class="mt-4 font-semibold text-blue-600 hover:text-blue-800">Read More &rarr;</a>
+                    </div>
+                </div>
+                <!-- Blog Post 3 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+                    <img src="https://placehold.co/600x400/60a5fa/ffffff?text=Strategy" alt="Publishing Companies" class="w-full h-48 object-cover">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <p class="text-sm text-blue-600 font-semibold mb-2">PUBLISHING</p>
+                        <h3 class="text-xl font-semibold mb-3">Top Music Publishing Companies for Independent Artists</h3>
+                        <p class="text-gray-600 flex-grow">This is a key question for creators aiming to professionalize. This article provides a curated list of publishers who champion and work with indie artists.</p>
+                        <a href="#" class="mt-4 font-semibold text-blue-600 hover:text-blue-800">Read More &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Your AI-Powered Legal & Licensing Department</h2>
+                <p class="text-gray-600 mt-2">Tools that give you the first-mover advantage.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1: AI Agreement Crafting -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-lg text-center border-2 border-blue-600">
+                    <div class="text-4xl text-blue-600 mb-4"><i class="fas fa-feather-alt"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">AI Agreement Crafting</h3>
+                    <p class="text-gray-600">Our core feature. Describe your deal in plain English and generate draft sync licenses, master use agreements, and producer contracts in seconds.</p>
+                </div>
+                <!-- Feature 2: AI Contract Analysis -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-lg text-center">
+                    <div class="text-4xl text-blue-600 mb-4"><i class="fas fa-search-dollar"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">AI Contract Analysis</h3>
+                    <p class="text-gray-600">Received a contract from a third party? Upload it and our AI will summarize key terms, explain complex clauses, and flag potential issues for you.</p>
+                </div>
+                <!-- Feature 3: Opportunity Finder -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-lg text-center">
+                    <div class="text-4xl text-blue-600 mb-4"><i class="fas fa-bullseye"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Opportunity Finder</h3>
+                    <p class="text-gray-600">Get access to a curated list of active licensing opportunities from filmmakers, game developers, and content creators, updated weekly by our AI.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Newsletter CTA Section -->
+    <section id="newsletter" class="gradient-bg py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white">Get Your First-Mover Advantage</h2>
+            <p class="text-blue-100 mt-2 max-w-2xl mx-auto">Join our "License This!" newsletter and get a weekly list of real, active music licensing opportunities delivered directly to your inbox. Free forever.</p>
+            <form class="mt-8 max-w-md mx-auto" onsubmit="handleNewsletterSignup(event)">
+                <div class="flex flex-col md:flex-row gap-4">
+                    <input type="email" id="newsletter-email" placeholder="Enter your email address" class="w-full px-4 py-3 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-white" required>
+                    <button type="submit" class="bg-white text-blue-700 font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors">Sign Up</button>
+                </div>
+                <p id="newsletter-status" class="text-white mt-4"></p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Simple Pricing for Ambitious Creators</h2>
+                <p class="text-gray-600 mt-2">Start free. Upgrade when you're closing deals.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Free Tier -->
+                <div class="bg-white p-8 rounded-lg shadow-lg border border-gray-200 flex flex-col">
+                    <h3 class="text-2xl font-semibold text-center">Free</h3>
+                    <p class="text-center text-gray-500 mt-2">To get you started</p>
+                    <p class="text-5xl font-bold text-center mt-4">$0<span class="text-lg font-medium text-gray-500">/mo</span></p>
+                    <ul class="mt-8 space-y-4 text-gray-600 flex-grow">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> 2 AI Agreement Drafts / month</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> 1 AI Contract Analysis / month</li>
+                    </ul>
+                    <a href="#" class="w-full text-center mt-8 bg-gray-200 text-gray-800 font-bold py-3 px-6 rounded-lg hover:bg-gray-300 transition-colors">Start for Free</a>
+                </div>
+                <!-- Indie Artist Plan -->
+                <div class="bg-white p-8 rounded-lg shadow-2xl border-2 border-blue-600 flex flex-col relative">
+                    <p class="absolute top-0 -translate-y-1/2 bg-blue-600 text-white text-sm font-bold px-3 py-1 rounded-full">MOST POPULAR</p>
+                    <h3 class="text-2xl font-semibold text-center text-blue-800">Creator</h3>
+                    <p class="text-center text-gray-500 mt-2">For active artists & managers</p>
+                    <p class="text-5xl font-bold text-center mt-4">$19<span class="text-lg font-medium text-gray-500">/mo</span></p>
+                    <ul class="mt-8 space-y-4 text-gray-600 flex-grow">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> 15 AI Agreement Drafts / month</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> 10 AI Contract Analyses / month</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> Full Access to Opportunity Finder</li>
+                    </ul>
+                    <a href="#" class="w-full text-center mt-8 bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors">Choose Plan</a>
+                </div>
+                <!-- Publisher Pro Plan -->
+                <div class="bg-white p-8 rounded-lg shadow-lg border border-gray-200 flex flex-col">
+                    <h3 class="text-2xl font-semibold text-center">Publisher</h3>
+                    <p class="text-center text-gray-500 mt-2">For professionals & teams</p>
+                    <p class="text-5xl font-bold text-center mt-4">$79<span class="text-lg font-medium text-gray-500">/mo</span></p>
+                    <ul class="mt-8 space-y-4 text-gray-600 flex-grow">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> All Creator features</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> Unlimited AI Agreement Drafts</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> Unlimited AI Contract Analyses</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> Priority Support</li>
+                    </ul>
+                    <a href="#" class="w-full text-center mt-8 bg-gray-800 text-white font-bold py-3 px-6 rounded-lg hover:bg-gray-900 transition-colors">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-12">
+        <div class="container mx-auto px-6 text-center text-gray-600">
+            <p>&copy; 2025 LicenseRight AI. All rights reserved.</p>
+            <div class="mt-4">
+                <a href="#" class="text-gray-600 hover:text-blue-600 px-2">Terms of Service</a>
+                <a href="#" class="text-gray-600 hover:text-blue-600 px-2">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Fullscreen Article Modal -->
+    <div id="article-modal-overlay" class="modal-overlay fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center opacity-0 pointer-events-none">
+        <div id="article-modal-content" class="modal-content bg-white rounded-lg shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto p-8 transform scale-95">
+            <!-- Article content will be injected here -->
+        </div>
+    </div>
+
+
+    <script>
+        // --- Gemini API Call Function ---
+        async function callGemini(systemPrompt, userPrompt, outputElementId) {
+            const outputElement = document.getElementById(outputElementId);
+            outputElement.style.display = 'block';
+            outputElement.innerHTML = '<div class="flex items-center justify-center"><i class="fas fa-spinner fa-spin mr-2"></i>Generating...</div>';
+
+            const apiKey = ""; // Leave blank for automatic key handling
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+
+            const payload = {
+                contents: [{ parts: [{ text: userPrompt }] }],
+                systemInstruction: {
+                    parts: [{ text: systemPrompt }]
+                },
+            };
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    throw new Error(`API call failed with status: ${response.status}`);
+                }
+
+                const result = await response.json();
+                const candidate = result.candidates?.[0];
+
+                if (candidate && candidate.content?.parts?.[0]?.text) {
+                    outputElement.innerText = candidate.content.parts[0].text;
+                } else {
+                    outputElement.innerText = 'Sorry, the AI could not generate a response. Please try again.';
+                }
+            } catch (error) {
+                console.error('Gemini API Error:', error);
+                outputElement.innerText = 'An error occurred. Please check the console for details.';
+            }
+        }
+
+        // --- Tool Functions ---
+        function generateSocialIdeas() {
+            const userInput = document.getElementById('social-input').value;
+            if (!userInput) { alert('Please enter some information about your music.'); return; }
+            
+            const systemPrompt = "You are a creative social media manager for indie musicians. Generate 5 distinct and engaging social media post ideas based on the user's input. Format the output clearly with headers for each idea.";
+            const userPrompt = `Generate 5 social media post ideas for the following: ${userInput}`;
+            callGemini(systemPrompt, userPrompt, 'social-output');
+        }
+
+        function generateArtistBio() {
+            const userInput = document.getElementById('bio-input').value;
+            if (!userInput) { alert('Please enter some keywords about your music.'); return; }
+
+            const systemPrompt = "You are an expert music journalist who writes compelling artist biographies. Write a professional, 2-paragraph artist bio based on the keywords provided by the user. The tone should be engaging and professional.";
+            const userPrompt = `Write an artist bio based on these keywords: ${userInput}`;
+            callGemini(systemPrompt, userPrompt, 'bio-output');
+        }
+
+        function generateFanEmail() {
+            const userInput = document.getElementById('email-input').value;
+            if (!userInput) { alert('Please enter the news you want to share.'); return; }
+
+            const systemPrompt = "You are a friendly and engaging community manager for a musician. Draft a concise and exciting email to send to a fan mailing list based on the user's update. Use a conversational tone and include a clear call to action.";
+            const userPrompt = `Draft a fan email about the following news: ${userInput}`;
+            callGemini(systemPrompt, userPrompt, 'email-output');
+        }
+        
+        // --- Newsletter Signup ---
+        function handleNewsletterSignup(event) {
+            event.preventDefault();
+            const emailInput = document.getElementById('newsletter-email');
+            const statusElement = document.getElementById('newsletter-status');
+            
+            // Basic email validation
+            if (emailInput.value && emailInput.checkValidity()) {
+                statusElement.textContent = "Thank you for subscribing!";
+                statusElement.style.color = '#a7f3d0'; // Light green
+                emailInput.value = ''; 
+                // In a real application, you would send this email to a service
+                // like Mailchimp, ConvertKit, etc.
+            } else {
+                statusElement.textContent = "Please enter a valid email address.";
+                statusElement.style.color = '#fca5a5'; // Light red
+            }
+        }
+
+    </script>
+
+</body>
+</html>
